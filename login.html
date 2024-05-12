@@ -159,7 +159,7 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="Home.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="Products.html">Products</a></li>  
                                 <li><a href="Contact.html">Contact</a></li>
                                 <li><a href="About.html">About us</a></li>
@@ -197,7 +197,7 @@
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="Home.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="#">Terms</a></li>
                                 <li><a href="#">Privacy</a></li>
                                 <li><a href="#">Policy</a></li>
@@ -212,28 +212,35 @@
 
   
 
-
-    <script>
-        const tabs = document.querySelector(".tabs");
-        const tabButton = document.querySelectorAll(".navTab");
-        const content = document.querySelectorAll(".content");
-
-        tabs.addEventListener("click", e => {
-            const id = e.target.dataset.toggle;
-            if (id) {
-                tabButton.forEach(navTab => {
-                    navTab.classList.remove("active");
-                });
-                e.target.classList.add("active");
-            }
-            content.forEach(content => {
-                content.classList.remove("active");
-            });
-
-            const element = document.getElementById(id);
-            element.classList.add("active");
-        });
-    </script>
 </body>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+ <script>
+    const tabs = document.querySelector(".tabs");
+    const tabButton = document.querySelectorAll(".navTab");
+    const content = document.querySelectorAll(".content");
+
+    tabs.addEventListener("click", e => {
+        const id = e.target.dataset.toggle;
+        if (id) {
+            tabButton.forEach(navTab => {
+                navTab.classList.remove("active");
+            });
+            e.target.classList.add("active");
+        }
+        content.forEach(content => {
+            content.classList.remove("active");
+        });
+
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    });
+</script>
 
 </html>
