@@ -109,6 +109,7 @@
   small,
   button {
     display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .wrapper {
@@ -219,10 +220,32 @@
   
   .messageHelp {
     margin: 0.5em 0;
-    font-size: 1.1rem;
-    color: hsl(203, 20%, 41%);
+    font-size: 0.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(203, 20%, 47%);
     user-select: none;
   }
+
+
+  .incorrectPassword{
+    display: none;
+  }
+  .validEmail{
+    display: none;
+  }
+
+  .hiddenBlock{
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
   #register input:first-of-type {
     margin-bottom: 1em;
   }

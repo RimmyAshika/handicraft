@@ -33,69 +33,78 @@
                 <a href="index.html"><li>Our Products</li></a>
                 <a href="About.html"><li>About Us</li></a>
                 <a href="#"><li>Contact Us</li></a>
-                <a href="login.html" class="active"><li>Log In/Sign Up</li></a>
+                <a href="login.html" class="active"><li id="loginHeader">Log In/Sign Up</li></a>
             </ul>
         </nav>
     </header>
-<div class="container d-flex justify-content-center">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="wrapper">
-                <div class="tabs">
-                    <button class="navTab active" data-toggle="login">Login</button>
-                    <button class="navTab" data-toggle="register">Register</button>
-                </div>
-                <div class="contentWrapper">
-                    <div class="content active" id="login">
-                        <form action="#" method="POST" autocomplete="off">
-                            <div class="formGroup">
-                                <label for="email">Email address</label>
-                                <input type="email" id="email" placeholder="name@example.com" required />
-                                <small class="messageHelp">
-                                    We'Il never share your email with anyone else
-                                </small>
-                                <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="Password" required />
-                                <small class="messageHelp">Password incorrect</small>
-                                <div>
-                                    <input type="checkbox" id="checkBox" />
-                                    <span>Keep me Signed in</span>
-                                </div>
-                                <a href="#" id="passwordReset">Forgot password?</a>
-                                <button class="btn btn-log" type="submit">Login</button>
-                            </div>
-                        </form>
+
+    <div class="container d-flex justify-content-center">
+        <div id="userInfoBox" class="wrapper hiddenBlock">
+            <h2>User: <span id="userName"></span></h2>
+            <button class="btn btn-log" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+
+    <!-- Login and signup forms -->
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="authBox" class="wrapper">
+                    <div class="tabs">
+                        <button id="login_tab" class="navTab active" data-toggle="login">Login</button>
+                        <button id="register_tab" class="navTab" data-toggle="register">Register</button>
                     </div>
-                    <div class="content" id="register">
-                        <form action="#" method="POST" autocomplete="off">
-                            <div class="formGroup">
-                                <label for="username">Username</label>
-                                <input type="text" id="username" placeholder="Username" required />
-                                <label for="email">Email address</label>
-                                <input type="email" id="email" placeholder="name@example.com" required
-                                    title="Enter a valid email address" />
-                                <small class="messageHelp">
-                                    Enter a valid email address
-                                </small>
-                                <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="Password" required
-                                    title="Must be at least 6 characters" />
-                                <small class="messageHelp">Must be at least 6 characters</small>
-                                <label for="confirmPassword">Confirm password</label>
-                                <input type="password" id="confirmPassword" placeholder="Confirm Password" />
-                                <small class="messageHelp">Password incorrect</small>
-                                <button class="btn btn-log" type="submit">Register</button>
-                            </div>
-                        </form>
+                    <div class="contentWrapper">
+                        <div class="content active" id="login">
+                            <form id="login_form"action="#" method="POST" autocomplete="off">
+                                <div class="formGroup">
+                                    <label for="email">Email address</label>
+                                    <input type="email" id="login_email" placeholder="name@example.com" required />
+                                    <small class="messageHelp">We'Il never share your email with anyone else</small>
+
+                                    <label style="margin-top: 20px;" for="password">Password</label>
+                                    <input type="password" id="login_password" placeholder="Password" required />
+                                    <small class="messageHelp incorrectPassword">Password incorrect</small>
+
+                                    <!-- <div>
+                                        <input type="checkbox" id="checkBox" />
+                                        <span>Keep me Signed in</span>
+                                    </div> -->
+
+                                    <!-- <a href="#" id="passwordReset">Forgot password?</a> -->
+
+                                    <button class="btn btn-log" type="submit" onclick="login()">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="content" id="register">
+                            <form id="register_form" action="#" method="POST" autocomplete="off">
+                                <div class="formGroup">
+                                    <label for="full_name">Full Name</label>
+                                    <input type="text" id="full_name" placeholder="Full Name" required />
+
+                                    <label for="email">Email address</label>
+                                    <input type="email" id="register_email" placeholder="name@example.com" required title="Enter a valid email address" />
+                                    <small class="messageHelp validEmail"> Enter a valid email address </small>
+
+                                    <label for="password">Password</label>
+                                    <input type="password" id="register_password" placeholder="Password" required title="Must be at least 6 characters" />
+                                    <small class="messageHelp">Must be at least 6 characters</small>
+
+                                    <label for="confirmPassword">Confirm password</label>
+                                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required/>
+                                    <small class="messageHelp incorrectPassword">Password incorrect</small>
+
+                                    <button class="btn btn-log" type="submit" onclick="register()">Register</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-   
-
-
 
     
     <footer class="footer-section  mt-5">
@@ -163,7 +172,7 @@
                                 <li><a href="Products.html">Products</a></li>  
                                 <li><a href="Contact.html">Contact</a></li>
                                 <li><a href="About.html">About us</a></li>
-                           
+                            
                             </ul>
                         </div>
                     </div>
@@ -211,7 +220,6 @@
     </footer>
 
   
-
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -220,6 +228,7 @@
       https://firebase.google.com/docs/web/setup#available-libraries -->
  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+ <script src="index.js"></script>
 
  <script>
     const tabs = document.querySelector(".tabs");
@@ -227,20 +236,26 @@
     const content = document.querySelectorAll(".content");
 
     tabs.addEventListener("click", e => {
-        const id = e.target.dataset.toggle;
+        const element = e.target;
+        toggleLogin(element);
+    });
+
+    function toggleLogin(element){
+
+        const id = element.dataset.toggle;
         if (id) {
             tabButton.forEach(navTab => {
                 navTab.classList.remove("active");
             });
-            e.target.classList.add("active");
+            element.classList.add("active");
         }
         content.forEach(content => {
             content.classList.remove("active");
         });
 
-        const element = document.getElementById(id);
-        element.classList.add("active");
-    });
+        const emt = document.getElementById(id);
+        emt.classList.add("active");
+    }
 </script>
 
 </html>
