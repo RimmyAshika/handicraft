@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handicraft</title>
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <figure class="brand"><img src="Images/logoh.jpg" max-height="100px" height="100%" /></figure>
+    <nav class="menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+      <ul>
+        <a href="index.html" class="active">
+          <li>Home</li>
+        </a>
+        <a href="#">
+          <li>Our Products</li>
+        </a>
+        <a href="About.html">
+          <li>About Us</li>
+        </a>
+        <a href="contactus.html">
+          <li>Contact Us</li>
+        </a>
+        <a href="login.html">
+          <li>Log In/Sign Up</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <div class="search">
+    <div id="wrap">
+      <form action="Products.html" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="What're you looking for ?"><input id="search_submit"
+          value="Rechercher" type="submit">
+      </form>
+    </div>
+
+  </div>
+
+  <section class="slider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="Images/mask.jpg" alt="First slide" height="400" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="Images/buddha.jpg" alt="Second slide" height="400" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="Images/khukuri1.jpg" alt="Third slide" height="400" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+
+  <div class="container">
+    <h3 class="product_heading">Popular Products</h3>
+    <div class="row my-5">
+      <div class="box col-sm-3">
+        <div class="top">
+          <img src="Images/product2.jpeg" alt="" />
+          <span><i class="fa fa-heart"></i><i class="fa fa-exchange-alt"></i>
+          </span>
+        </div>
+       
+        <div class="bottom">
+          <h3>Home Decor</h3>
+          <p>
+            Buy this product for decore yours home
+          </p>
+     <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span> &#8377; 799</span>
+            <a class="btn btn-success float-right" href="http://www.jquery2dotnet.com">Add to cart</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="box col-sm-3">
+        <div class="top">
+          <img src="Images/product4.jpeg" alt="" />
+          <span><i class="fa fa-heart"></i><i class="fas fa-exchange-alt"></i></span>
+        </div>
+        <div class="bottom">
+          <h3>Home Decoration</h3>
+          <p>
+            This is beautiful for Your's Home
+          </p>
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span>&#8377; 599</span>
+            <a class="btn btn-success float-right" href="http://www.jquery2dotnet.com">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="box col-sm-3">
+        <div class="top">
+          <img src="Images/product1.jpeg" alt="" />
+          <span><i class="fa fa-heart"></i><i class="fa fa-exchange-alt"></i></span>
+        </div>
+        <div class="bottom">
+          <h3>Hand Made Swan</h3>
+          <p>
+            The highest buyed product
+          </p>
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span>&#8377;499</span>
+            <a class="btn btn-success float-right" href="http://www.jquery2dotnet.com">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="box col-sm-3">
+        <div class="top">
+          <img src="Images/product1.jpeg" alt="" />
+          <span><i class="fa fa-heart"></i><i class="fa fa-exchange-alt"></i></span>
+        </div>
+        <div class="bottom">
+          <h3>Hand Made Swan</h3>
+          <p>
+            The highest buyed product
+          </p>
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span>&#8377;499</span>
+            <a class="btn btn-success float-right" href="http://www.jquery2dotnet.com">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5 py-3">
+    <h2 class="product_heading">Highest Rated Product of The Year</h2>
+    <hr>
+    <div class="row">
+
+      <div class="col-sm-6">
+        <h3 class="mt-5 pt-3">SanwariyaArt Traditional Rajasthani Jaipuri Handicraft Handmade Walls Doors
+          Hanging Fengshui Ring
+          5 Bells for Home Balcony Garden Decoration Items for Vastu with Good Sound (6)</h3>
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="ml-3">(Out for 18220 Customer's)</span>
+          </div>
+          <div class="price my-2">
+            <span>Buy Now</span>
+            <span>&#8377;999</span>
+            <a class="btn btn-success float-right" href="http://www.jquery2dotnet.com">Add to cart</a>
+          </div>
+      </div>
+      <div class="col-sm-6">
+        <img class="rounded" src="Images/Sideproduct.jpg" max-width="350" width="100%" />
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span>Lalpur, Ranchi, Jharkhand</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>+91-8292850067</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>mail@info.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="Images/logoh.jpg" class="img-fluid" alt="logo" width="250"
+                    height="250" /></a>
+              </div>
+              <div class="footer-text">
+                <p>"Good Crafts for Good Relations"</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjc5MzA3NTM1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"
+                  target="_blank">
+                  <i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                  target="_blank">
+                  <i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&flowName=GlifWebSignIn&flowEntry=SignUp"
+                  target="_blank">
+                  <i class="fab fa-google-plus-g google-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About.html">About us</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2023, All Right Reserved <a href="">Riya</a></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

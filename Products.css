@@ -1,0 +1,58 @@
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .hadicraft{
+    animation: 5s ease-out 0s 1 slideInFromTop;
+  }
+ .navbar {
+    background-color: #f0f2f4;
+    z-index: 5;
+ }
+  .products{
+    animation: 5s ease-out 0s 1 slideInFromLeft;
+  }
+.card img{
+        max-width: 347px;
+        height: 250px;
+    }
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-links li a:hover {
+    text-decoration: underline;
+  }
+  
