@@ -63,6 +63,7 @@ function logout() {
         setCookie("userIsLoggedIn", false, 1);
         setCookie("uid", "", 1);
         setCookie("idToken", "", 1);
+        setCookie("userFullName","",1);
         alert("user logged out")
         location.reload();
       })
@@ -213,6 +214,13 @@ function setUserAsLoggedIn(uid, idToken){
     setCookie("userIsLoggedIn", true, 1);
     setCookie("uid", uid, 1);
     setCookie("idToken", idToken, 1);
+
+    getUserData().then(userData => {
+        const userFullName = userData.full_name;
+        setCookie("userFullName", userFullName, 1);
+    }).catch(error => {
+        console.error('Error fetching user data:', error.message);
+    });
     // console.log(`Cookie saved: "userIsLoggedIn: ${getCookie("userIsLoggedIn")}"`);
     // console.log(`Cookie saved: "uid: ${getCookie("uid")}"`);
     // console.log(`Cookie saved: "idToken: ${getCookie("idToken")}"`);
@@ -221,6 +229,13 @@ function setUserAsLoggedIn(uid, idToken){
 function updateLoginPage(){
     document.getElementById('userInfoBox').classList.toggle('hiddenBlock')
     document.getElementById('authBox').classList.toggle('hiddenBlock')
+
+    const userFullName = getCookie("userFullName");
+    if(userFullName){
+        document.getElementById('userName').innerHTML= userFullName;
+
+        return;
+    }
 
     getUserData().then(userData => {
         const userFullName = userData.full_name;
@@ -232,6 +247,11 @@ function updateLoginPage(){
     
 }
 function updateNavbar(){
+    const userFullName = getCookie("userFullName");
+    if(userFullName){
+        document.getElementById('loginHeader').innerHTML = userFullName;
+        return;
+    }
     getUserData().then(userData => {
         const userFullName = userData.full_name;
         document.getElementById('loginHeader').innerHTML = userFullName;
